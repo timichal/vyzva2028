@@ -5,6 +5,10 @@ body {
   color: #490a3d;
 }
 
+b {
+  color: #bd1550;
+}
+
 .title {
   margin: 0 0 .5em 0;
   padding: 1px 50px;
