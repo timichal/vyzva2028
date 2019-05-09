@@ -29,6 +29,10 @@ body {
   padding: 20px;
 }
 
+.content h2 {
+  line-height: 150%;
+}
+
 .title p, .subtitle, .content, .signatures {
   max-width: 800px;
 }
