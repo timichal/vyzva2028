@@ -9,7 +9,7 @@ function procSheet(page) {
   for (let i = 2; i < rows.length; i++) {
     const row = rows[i].getElementsByTagName("td");
     const rowProcessed = [];
-    for (let j = 1; j < rows.length; j++) {
+    for (let j = 1; j < row.length; j++) {
       rowProcessed.push(row[j].textContent);
     }
 
