@@ -8,12 +8,12 @@ function procSheet(page) {
   const rows = page.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
   for (let i = 2; i < rows.length; i++) {
     const row = rows[i].getElementsByTagName("td");
-    const rowProcessed = [];
-    for (let j = 1; j < row.length; j++) {
-      rowProcessed.push(row[j].textContent);
+    if (row[4].textContent === "A") {
+      const rowProcessed = [];
+      rowProcessed.push(row[1].textContent, row[2].textContent, row[3].textContent);
+      if (rowProcessed[0] === "sebe") data.lide.push([rowProcessed[1], rowProcessed[2]]);
+      if (rowProcessed[0] === "instituci") data.inst.push([rowProcessed[1], rowProcessed[2]]);
     }
-    if (rowProcessed[0] === "sebe") data.lide.push([rowProcessed[1], rowProcessed[2]]);
-    if (rowProcessed[0] === "instituci") data.inst.push([rowProcessed[1], rowProcessed[2]]);
   }
 
   function addToTable(arrName, reverse = false) {
